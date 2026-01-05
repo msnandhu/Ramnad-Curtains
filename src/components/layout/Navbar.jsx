@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Search, ShoppingBag, User, Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useProducts } from '../../context/ProductContext';
+import logo from '../../assets/logo.jpg';
 
 const Navbar = () => {
     const { cart, setIsCartOpen } = useProducts();
@@ -40,8 +41,8 @@ const Navbar = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link to="/" className="text-2xl font-bold tracking-tighter uppercase z-50">
-                        Ramnad Curtains
+                    <Link to="/" className="flex items-center z-50">
+                        <img src={logo} alt="Ramnad Curtains" className="h-12 w-auto object-contain" />
                     </Link>
 
                     {/* Desktop Navigation */}

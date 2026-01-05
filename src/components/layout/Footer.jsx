@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail, ArrowRight } from 'lucide-react';
+import logo from '../../assets/logo.jpg';
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-bold tracking-tighter uppercase">Ramnad Curtains</h3>
+                        <img src={logo} alt="Ramnad Curtains" className="h-16 w-auto object-contain bg-white rounded-full p-1" />
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Elevating spaces with premium curtains and wallpapers since 2024.
                             Minimalist design meets exceptional quality.
