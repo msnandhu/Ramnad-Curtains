@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +15,7 @@ const ProductCard = ({ product }) => {
                 </Link>
                 {/* Quick Add Button */}
                 <button
-                    className="absolute bottom-4 right-4 bg-white text-black p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-black hover:text-white"
+                    className="absolute bottom-4 right-4 bg-white text-black p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-black hover:text-white opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
                     aria-label="Add to cart"
                 >
                     <Plus size={20} />

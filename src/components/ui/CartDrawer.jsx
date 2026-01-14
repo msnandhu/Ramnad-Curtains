@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { X, Minus, Plus, Trash2 } from 'lucide-react';
 import { useProducts } from '../../context/ProductContext';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import hero1 from '../../assets/hero-1.png';
 import hero2 from '../../assets/hero-2.png';
@@ -46,6 +46,17 @@ const HeroSlider = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                     className="absolute inset-0"
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                        const swipe = Math.abs(offset.x) * velocity.x;
+                        if (swipe < -10000) {
+                            nextSlide();
+                        } else if (swipe > 10000) {
+                            prevSlide();
+                        }
+                    }}
                 >
                     {/* Background Image with Overlay */}
                     <div
@@ -89,7 +100,7 @@ const HeroSlider = () => {
                             >
                                 <a
                                     href={slides[current].link}
-                                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold text-sm tracking-widest hover:bg-gray-200 transition-colors duration-300"
+                                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold text-sm tracking-widest hover:bg-gray-200 transition-colors duration-300 pointer-events-auto"
                                 >
                                     {slides[current].cta.toUpperCase()} <ArrowRight size={16} />
                                 </a>

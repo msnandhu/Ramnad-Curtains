@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Search, ShoppingBag, User, Menu, X } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { useProducts } from '../../context/ProductContext';
 import logo from '../../assets/logo.jpg';
 
@@ -22,6 +22,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'HOME', path: '/' },
         { name: 'CURTAINS', path: '/shop?category=curtains' },
+        { name: 'BLINDS', path: '/shop?category=blinds' },
         { name: 'WALLPAPERS', path: '/shop?category=wallpapers' },
         { name: 'NEW ARRIVALS', path: '/shop' },
         { name: 'ABOUT', path: '/about' },

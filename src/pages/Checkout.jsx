@@ -49,7 +49,7 @@ const Checkout = () => {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
-                                    <input type="text" className="w-full border-gray-300 p-3 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-black" />
+                                    <input type="text" inputMode="numeric" pattern="[0-9]*" className="w-full border-gray-300 p-3 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-black" />
                                 </div>
                             </div>
 
